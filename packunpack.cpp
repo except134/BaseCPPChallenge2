@@ -38,6 +38,7 @@ bool PackUnpack::CryptDecrypt(const std::string& inf, const std::string& outf, c
 		fread_s(buf, infilelength, 1, infilelength, infile);
 	}
 	else {
+		delete[] buf;
 		std::cout << "Error: Something wrong with input file \"" << inf << "\"" << std::endl;
 		return false;
 	}
